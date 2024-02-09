@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		541C2D5B2B7619E300CD8600 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D5A2B7619E300CD8600 /* Coordinator.swift */; };
+		541C2D5D2B761D5800CD8600 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D5C2B761D5800CD8600 /* AppCoordinator.swift */; };
+		541C2D5F2B761E0E00CD8600 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D5E2B761E0E00CD8600 /* OnboardingCoordinator.swift */; };
 		54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA4182B72205C00BD9125 /* AppDelegate.swift */; };
 		54CBA41B2B72205C00BD9125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */; };
 		54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41C2B72205C00BD9125 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		541C2D5A2B7619E300CD8600 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		541C2D5C2B761D5800CD8600 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		541C2D5E2B761E0E00CD8600 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		54CBA4152B72205C00BD9125 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CBA4182B72205C00BD9125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				541C2D5A2B7619E300CD8600 /* Coordinator.swift */,
+				541C2D5C2B761D5800CD8600 /* AppCoordinator.swift */,
+				541C2D5E2B761E0E00CD8600 /* OnboardingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 				54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */,
 				54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */,
 				54CBA44B2B722DE100BD9125 /* UIFont+Extension.swift in Sources */,
+				541C2D5F2B761E0E00CD8600 /* OnboardingCoordinator.swift in Sources */,
+				541C2D5D2B761D5800CD8600 /* AppCoordinator.swift in Sources */,
 				54CBA44F2B72379800BD9125 /* AppColors.swift in Sources */,
 				54CBA41B2B72205C00BD9125 /* SceneDelegate.swift in Sources */,
 				54CBA44D2B7236DF00BD9125 /* UIColor+Extension.swift in Sources */,
