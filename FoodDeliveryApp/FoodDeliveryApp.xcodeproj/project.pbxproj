@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541C2D5B2B7619E300CD8600 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D5A2B7619E300CD8600 /* Coordinator.swift */; };
 		54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA4182B72205C00BD9125 /* AppDelegate.swift */; };
 		54CBA41B2B72205C00BD9125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */; };
 		54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41C2B72205C00BD9125 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		541C2D5A2B7619E300CD8600 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		54CBA4152B72205C00BD9125 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CBA4182B72205C00BD9125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541C2D572B76198C00CD8600 /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				541C2D592B7619BB00CD8600 /* Coordinators */,
+				541C2D582B7619B300CD8600 /* Controllers */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		541C2D582B7619B300CD8600 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		541C2D592B7619BB00CD8600 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				541C2D5A2B7619E300CD8600 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		54CBA40C2B72205C00BD9125 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +112,7 @@
 		54CBA4172B72205C00BD9125 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				541C2D572B76198C00CD8600 /* NavigationLayer */,
 				54CBA42C2B722B5600BD9125 /* Resources */,
 				54CBA4182B72205C00BD9125 /* AppDelegate.swift */,
 				54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */,
@@ -227,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541C2D5B2B7619E300CD8600 /* Coordinator.swift in Sources */,
 				54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */,
 				54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */,
 				54CBA44B2B722DE100BD9125 /* UIFont+Extension.swift in Sources */,
