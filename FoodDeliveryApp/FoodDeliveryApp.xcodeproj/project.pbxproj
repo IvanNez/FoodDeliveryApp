@@ -15,6 +15,8 @@
 		541C2D652B76223000CD8600 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D642B76223000CD8600 /* ListCoordinator.swift */; };
 		541C2D672B76225000CD8600 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D662B76225000CD8600 /* ProfileCoordinator.swift */; };
 		541C2D692B76227600CD8600 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C2D682B76227600CD8600 /* TabBarController.swift */; };
+		542B37B62B7E239300A7FCEB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B37B52B7E239300A7FCEB /* OnboardingViewController.swift */; };
+		542B37B82B7E23C400A7FCEB /* ObboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B37B72B7E23C400A7FCEB /* ObboardingViewPresenter.swift */; };
 		54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA4182B72205C00BD9125 /* AppDelegate.swift */; };
 		54CBA41B2B72205C00BD9125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */; };
 		54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41C2B72205C00BD9125 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		541C2D642B76223000CD8600 /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		541C2D662B76225000CD8600 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		541C2D682B76227600CD8600 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		542B37B52B7E239300A7FCEB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		542B37B72B7E23C400A7FCEB /* ObboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObboardingViewPresenter.swift; sourceTree = "<group>"; };
 		54CBA4152B72205C00BD9125 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CBA4182B72205C00BD9125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,23 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		542B37B32B7E22DC00A7FCEB /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				542B37B42B7E237D00A7FCEB /* Onboarding */,
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		542B37B42B7E237D00A7FCEB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				542B37B52B7E239300A7FCEB /* OnboardingViewController.swift */,
+				542B37B72B7E23C400A7FCEB /* ObboardingViewPresenter.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		54CBA40C2B72205C00BD9125 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +154,7 @@
 		54CBA4172B72205C00BD9125 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				542B37B32B7E22DC00A7FCEB /* UILayer */,
 				541C2D572B76198C00CD8600 /* NavigationLayer */,
 				54CBA42C2B722B5600BD9125 /* Resources */,
 				54CBA4182B72205C00BD9125 /* AppDelegate.swift */,
@@ -277,11 +299,13 @@
 			files = (
 				541C2D5B2B7619E300CD8600 /* Coordinator.swift in Sources */,
 				54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */,
+				542B37B82B7E23C400A7FCEB /* ObboardingViewPresenter.swift in Sources */,
 				54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */,
 				54CBA44B2B722DE100BD9125 /* UIFont+Extension.swift in Sources */,
 				541C2D5F2B761E0E00CD8600 /* OnboardingCoordinator.swift in Sources */,
 				541C2D5D2B761D5800CD8600 /* AppCoordinator.swift in Sources */,
 				54CBA44F2B72379800BD9125 /* AppColors.swift in Sources */,
+				542B37B62B7E239300A7FCEB /* OnboardingViewController.swift in Sources */,
 				541C2D612B7621EA00CD8600 /* HomeCoordinator.swift in Sources */,
 				541C2D672B76225000CD8600 /* ProfileCoordinator.swift in Sources */,
 				541C2D652B76223000CD8600 /* ListCoordinator.swift in Sources */,
