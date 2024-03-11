@@ -21,8 +21,10 @@
 		542B37BD2B7F5C3A00A7FCEB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B37BC2B7F5C3A00A7FCEB /* UserStorage.swift */; };
 		542B37C02B7F604C00A7FCEB /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B37BF2B7F604C00A7FCEB /* SceneFactory.swift */; };
 		5481D50D2B9D885B000948A8 /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481D50C2B9D885B000948A8 /* FDButton.swift */; };
+		54A8B6932B9EDB88009E6B83 /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B6922B9EDB88009E6B83 /* FDTextField.swift */; };
+		54A8B6952B9EDF47009E6B83 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B6942B9EDF47009E6B83 /* LoginPresenter.swift */; };
 		54A9DAFD2B91BF0D0015C350 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9DAFC2B91BF0D0015C350 /* LoginViewController.swift */; };
-		54A9DB022B91BFA10015C350 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9DB012B91BFA10015C350 /* BottomView.swift */; };
+		54A9DB022B91BFA10015C350 /* FDBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9DB012B91BFA10015C350 /* FDBottom.swift */; };
 		54CBA4192B72205C00BD9125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA4182B72205C00BD9125 /* AppDelegate.swift */; };
 		54CBA41B2B72205C00BD9125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */; };
 		54CBA41D2B72205C00BD9125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBA41C2B72205C00BD9125 /* ViewController.swift */; };
@@ -61,8 +63,10 @@
 		542B37BC2B7F5C3A00A7FCEB /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		542B37BF2B7F604C00A7FCEB /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		5481D50C2B9D885B000948A8 /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
+		54A8B6922B9EDB88009E6B83 /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
+		54A8B6942B9EDF47009E6B83 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		54A9DAFC2B91BF0D0015C350 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		54A9DB012B91BFA10015C350 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		54A9DB012B91BFA10015C350 /* FDBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDBottom.swift; sourceTree = "<group>"; };
 		54CBA4152B72205C00BD9125 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CBA4182B72205C00BD9125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CBA41A2B72205C00BD9125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,7 +208,8 @@
 		54A9DAFE2B91BF7A0015C350 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				54A9DB012B91BFA10015C350 /* BottomView.swift */,
+				54A9DB012B91BFA10015C350 /* FDBottom.swift */,
+				54A8B6922B9EDB88009E6B83 /* FDTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 		54A9DB002B91BF8C0015C350 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				54A8B6942B9EDF47009E6B83 /* LoginPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				54CBA44B2B722DE100BD9125 /* UIFont+Extension.swift in Sources */,
 				541C2D5F2B761E0E00CD8600 /* OnboardingCoordinator.swift in Sources */,
 				541C2D5D2B761D5800CD8600 /* AppCoordinator.swift in Sources */,
+				54A8B6932B9EDB88009E6B83 /* FDTextField.swift in Sources */,
 				54CBA44F2B72379800BD9125 /* AppColors.swift in Sources */,
 				54A9DAFD2B91BF0D0015C350 /* LoginViewController.swift in Sources */,
 				542B37B62B7E239300A7FCEB /* OnboardingViewController.swift in Sources */,
@@ -401,11 +408,12 @@
 				541C2D672B76225000CD8600 /* ProfileCoordinator.swift in Sources */,
 				541C2D652B76223000CD8600 /* ListCoordinator.swift in Sources */,
 				54CBA41B2B72205C00BD9125 /* SceneDelegate.swift in Sources */,
+				54A8B6952B9EDF47009E6B83 /* LoginPresenter.swift in Sources */,
 				542B37BA2B7E2EF800A7FCEB /* OnboardingPartViewController.swift in Sources */,
 				542B37BD2B7F5C3A00A7FCEB /* UserStorage.swift in Sources */,
 				542B37C02B7F604C00A7FCEB /* SceneFactory.swift in Sources */,
 				541C2D692B76227600CD8600 /* TabBarController.swift in Sources */,
-				54A9DB022B91BFA10015C350 /* BottomView.swift in Sources */,
+				54A9DB022B91BFA10015C350 /* FDBottom.swift in Sources */,
 				5481D50D2B9D885B000948A8 /* FDButton.swift in Sources */,
 				541C2D632B76220900CD8600 /* OrderCoordinator.swift in Sources */,
 				54CBA44D2B7236DF00BD9125 /* UIColor+Extension.swift in Sources */,
