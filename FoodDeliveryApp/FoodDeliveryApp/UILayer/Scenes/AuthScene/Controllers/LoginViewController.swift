@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
     //MARK: - Property
     private var state: LoginViewState = .initial
     var viewOutput: LoginViewOutput!
+    private var isKeyboardShown = false
+    private var bottomCTValue = 0.0
     
     //MARK: - Views
     private lazy var bottonView = FDBottom()
@@ -42,6 +44,8 @@ class LoginViewController: UIViewController {
     private lazy var signUpButton = FDButton()
     private lazy var verticalStack = UIStackView()
     
+    // MARK: -- Constraints
+    private var stackViewBottomCT = NSLayoutConstraint()
     
     //MARK: - Initializes
     init(viewOutput: LoginViewOutput, state: LoginViewState) {
@@ -54,13 +58,15 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        stopKeyboardListener()
+    }
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupLayout()
-        bottonView.button2Action = facebookPress
-        bottonView.button1Action = googlePress
+        setupObservers()
     }
     func facebookPress() {
         print("facebook")
@@ -103,31 +109,45 @@ private extension LoginViewController {
         verticalStack.translatesAutoresizingMaskIntoConstraints = false
         verticalStack.axis = .vertical
         verticalStack.spacing = 20
-
+        
         switch state {
         case .initial:
             return
         case .signIn:
             verticalStack.addArrangedSubview(signInUserName)
             verticalStack.addArrangedSubview(signInPassword)
+            bottomCTValue = -262
+            stackViewBottomCT = verticalStack.bottomAnchor.constraint(equalTo: bottonView.topAnchor,constant: -262)
+    
             NSLayoutConstraint.activate([
                 verticalStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                verticalStack.bottomAnchor.constraint(equalTo: bottonView.topAnchor,constant: -262)
+                stackViewBottomCT
             ])
         case .signUp:
             verticalStack.addArrangedSubview(signUpUsername)
             verticalStack.addArrangedSubview(signUpPassword)
             verticalStack.addArrangedSubview(signUpReEnterPass)
+            bottomCTValue = -227
+            stackViewBottomCT = verticalStack.bottomAnchor.constraint(equalTo: bottonView.topAnchor,constant: -227)
+            
             NSLayoutConstraint.activate([
                 verticalStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                verticalStack.bottomAnchor.constraint(equalTo: bottonView.topAnchor,constant: -227)
+                stackViewBottomCT
             ])
         }
-
+        
     }
     func setupBottomViews() {
         view.addSubview(bottonView)
         bottonView.translatesAutoresizingMaskIntoConstraints = false
+        
+        bottonView.button2Action = { [weak self] in
+            self?.facebookPress()
+        }
+        
+        bottonView.button1Action = { [weak self] in
+            self?.googlePress()
+        }
         
         NSLayoutConstraint.activate([
             bottonView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
@@ -221,7 +241,7 @@ private extension LoginViewController {
                 signInButton.heightAnchor.constraint(equalToConstant: 50)
             ])
         }
-       
+        
     }
     func setupSignUpButton() {
         view.addSubview(signUpButton)
@@ -326,6 +346,55 @@ extension LoginViewController: LoginViewInput {
     }
     
     
+}
+
+// MARK: -- Observer
+private extension LoginViewController {
+    func setupObservers() {
+        startKeyboardListener()
+    }
+    
+    func startKeyboardListener() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_ :)))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    func stopKeyboardListener() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            return
+        }
+        
+        let keyboardHeight = keyboardFrame.cgRectValue.height
+        
+        if !isKeyboardShown {
+            UIView.animate(withDuration: 0.3) {
+                self.stackViewBottomCT.constant -= keyboardHeight/4
+                self.view.layoutIfNeeded()
+                self.isKeyboardShown = true
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if isKeyboardShown {
+            UIView.animate(withDuration: 0.3) {
+                self.stackViewBottomCT.constant = self.bottomCTValue
+                self.view.layoutIfNeeded()
+                self.isKeyboardShown = false
+            }
+        }
+    }
 }
 
 //#Preview("LoginVC"){
