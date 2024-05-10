@@ -20,6 +20,8 @@ protocol LoginViewInput: AnyObject {
 
 class LoginViewController: UIViewController {
     
+   
+    
     //MARK: - Property
     private var state: LoginViewState = .initial
     var viewOutput: LoginViewOutput!
@@ -435,6 +437,9 @@ extension LoginViewController: LoginViewInput {
         loaderContainer.isHidden = true
         loader.stopAnimating()
     }
+    
+    
+
 }
 
 
@@ -442,3 +447,5 @@ extension LoginViewController: LoginViewInput {
 //#Preview("LoginVC"){
 //    LoginViewController(viewOutput: LoginPresenter(), state: .signUp)
 //}
+
+
